@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pnn"
+version = "0.1.0"
+description = "Programmable Neural Networks: compile logic into neural network weights instead of training them."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Shachar Iphraimov", email = "iphraimov@gmail.com" }]
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.22"]
+keywords = ["neural networks", "threshold logic", "compiler", "neuro-symbolic", "binary arithmetic"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.urls]
+Homepage = "https://github.com/bystac/programmable-neural-networks"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
